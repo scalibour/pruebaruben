@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Web_Ruben</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+(function(document) {
+	'use strict';
+	
+	var LightTableFilter = (function(Arr) {
+		
+		var _input;
+		
+		function _onInputEvent(e) {
+			_input = e.target;
+			var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+			Arr.forEach.call(tables, function(table) {
+				Arr.forEach.call(table.tBodies, function(tbody) {
+					Arr.forEach.call(tbody.rows, _filter);
+				});
+			});
+		}
+		
+		function _filter(row) {
+			var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+			row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+		}
+		
+		return {
+			init: function() {
+				var inputs = document.getElementsByClassName('light-table-filter');
+				Arr.forEach.call(inputs, function(input) {
+					input.oninput = _onInputEvent;
+				});
+			}
+		};
+	})(Array.prototype);
+	
+	document.addEventListener('readystatechange', function() {
+		if (document.readyState === 'complete') {
+			LightTableFilter.init();
+		}
+	});
+
+})(document);
+</script>
+<style type="text/css">
+	body{
+		font:normal medium/1.4 Tahoma, Geneva, sans-serif;
+		}
+	table {
+		border-collapse:collapse;
+		width:70%;
+		text-align:center;
+		margin: auto;
+		}
+	th,td {
+		padding: 0.25rem;
+		border:1px solid #004d83;
+		background:##004d83;	
+		}
+		
+	tbody tr:nth-child(odd) {
+		background: #eee;
+		}
+	.titulo{
+		padding: 0.5rem;
+		background:#004d83;
+		color: white;
+		text-align:center;
+		font-size: 21px;
+		}
+	#cuadro{
+		width: 90%;
+		background:#ffffff;
+		padding: 25px;
+		margin: 5px auto;
+		border: 3px solid #004d83;
+		}
+	#buscar{
+		width: 300px;
+		height: 36px;
+		font-size: 22px;
+		color: #fff;
+		background:#004d83;
+		padding-left: 20px;
+		text-align:center;
+		padding:10px;
+		margin:10px;
+		}
+	input:focus {
+		outline:none;
+		}
+</style>
+</head>
+
+<body>
+<div class="contenedor" id="contenedor" style=" height:1200px; margin-bottom:40px;">
+	<div class="logo" id="logo">
+    	<a href="index.html"><img src="./img/logo.jpg" style="margin:40px;"></a>
+    </div>
+	<div class="menu" id="menu">
+   	 <ul class="nav">
+        <li><a class="actives" href="index.html"> inicio </a></li>
+        <li><a class="actives" href="catalogo.html"> Cat&aacutelogo </a></li>
+        <li><a class="active" href="busqueda.html"> B&uacutesqueda </a></li>
+    
+      </ul>
+    </div>
+    <div>
+ 
+    </div>
+    <div class="informativo" id="informativo" style="height:700px">
+    	<div class="titulo_2" id="titulo_2">
+            <p><strong><h1>Buscador</h1></strong></p>
+            <div class="titulos_2" id="titulos_2">
+            </div>
+        </div>
+        <div id="cuadro">
+        	<center>
+            		<h1>Buscadar informacion sobre contenedores</h1>
+
+<div class="derecha" id="buscar">Buscar <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filtrar" style="border:none;"  />
+</div></center>
+
+	<div class="datagrid">
+    	<table class="order-table table">
+        <thead>
+        <tr class="titulo">
+        	<td>
+            	NUMERO
+            </td>
+            <td>
+            	CONTENEDOR
+            </td>
+            <td>
+            	NAVE
+            </td>
+        </tr>
+     	</thead>
+        <tbody>
+        	<tr>
+            	<td> 1122334455</td><td>Oficina</td><td>1</td>
+            </tr>
+            <tr>
+            	<td> 1111111111</td><td>Traspaletas</td><td>2</td>
+            </tr>
+            <tr>
+            	<td> 5555555555</td><td>Contenedores</td><td>3</td>
+            </tr>
+            <tr>
+            	<td> 3333333333</td><td>MCA Montaje</td><td>4</td>
+            </tr>
+            <tr>
+            	<td> 2222222222</td><td>C519</td><td>5</td>
+            </tr>
+            <tr>
+            	<td> 1122222222</td><td>MCA Delantero</td><td>6</td>
+            </tr>
+            <tr>
+            	<td> 2222334455</td><td>MCA Trasero</td><td>7</td>
+            </tr>
+            <tr>
+            	<td> 4444444441</td><td>MQBA0</td><td>8</td>
+            </tr>
+        </tbody>
+        </table>
+</div>
+</div>
+    </div>
+    		
+</div>
+
+</body>
+</html>
