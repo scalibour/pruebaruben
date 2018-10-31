@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script type="text/javascript">
+(function(document) {
+	'use strict';
+	
+	var LightTableFilter = (function(Arr) {
+		
+		var _input;
+		
+		function _onInputEvent(e) {
+			_input = e.target;
+			var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+			Arr.forEach.call(tables, function(table) {
+				Arr.forEach.call(table.tBodies, function(tbody) {
+					Arr.forEach.call(tbody.rows, _filter);
+				});
+			});
+		}
+		
+		function _filter(row) {
+			var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+			row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+		}
+		
+		return {
+			init: function() {
+				var inputs = document.getElementsByClassName('light-table-filter');
+				Arr.forEach.call(inputs, function(input) {
+					input.oninput = _onInputEvent;
+				});
+			}
+		};
+	})(Array.prototype);
+	
+	document.addEventListener('readystatechange', function() {
+		if (document.readyState === 'complete') {
+			LightTableFilter.input();
+		}
+	});
+
+})(document);
+</script>
+<style type="text/css">
+	body{
+		font:normal medium/1.4 Tahoma, Geneva, sans-serif;
+		}
+	table {
+		border-collapse:collapse;
+		width:70%;
+		text-align:center;
+		margin: auto;
+		}
+	th,td {
+		padding: 0.25rem;
+		border: 1px solid #ccc;		
+		}
+	tbody tr:nth-child(odd) {
+		background: #eee;
+		}
+	.titulo{
+		padding: 0.5rem;
+		background:#484848;
+		color: white;
+		text-align:center;
+		font-size: 21px;
+		}
+	#cuadro{
+		width: 90%;
+		background:#F8F8F8;
+		padding: 25px;
+		margin: 5px auto;
+		border: 3px solid #D8D8D8;
+		}
+	#buscar{
+		width: 300px;
+		font-size: 22px;
+		color: #fff;
+		background:#383838;
+		padding-left: 20px;
+		text-align:center;
+		border-radius: 5px;
+		padding:10px;
+		margin:10px;
+		}
+</style>
+</head>
+
+<body>
+
+		<div id="cuadro">
+        	<center>
+            		<h1>Buscar datos en una tabla</h1>
+
+<div class="derecha" id="buscar">Buscar <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filtro" />
+</div></center>
+
+	<div class="datagrid">
+    	<table class="order-table table">
+        <thead>
+        <tr class="titulo">
+        	<td>
+            	ID
+            </td>
+            <td>
+            	NOMBRE
+            </td>
+            <td>
+            	NACIONALIDAD
+            </td>
+        </tr>
+     	</thead>
+        <tbody>
+        	<tr>
+            	<td> 1122334455</td><td>Oficina</td><td>Burgos</td>
+            </tr>
+            <tr>
+            	<td> 1111111111</td><td>Traspaletas</td><td>Burgos</td>
+            </tr>
+            <tr>
+            	<td> 5555555555</td><td>Contenedores</td><td>Burgos</td>
+            </tr>
+            <tr>
+            	<td> 3333333333</td><td>MCA Montaje</td><td>Burgos</td>
+            </tr>
+            <tr>
+            	<td> 2222222222</td><td>C519</td><td>Burgos</td>
+            </tr>
+            <tr>
+            	<td> 1122222222</td><td>MCA Delantero</td><td>Burgos</td>
+            </tr>
+            <tr>
+            	<td> 2222334455</td><td>MCA Trasero</td><td>Burgos</td>
+            </tr>
+            <tr>
+            	<td> 4444444441</td><td>MQBA0</td><td>Burgos</td>
+            </tr>
+        </tbody>
+        </table>
+</div>
+</div>
+
+</body>
+</html>

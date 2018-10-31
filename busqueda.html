@@ -71,6 +71,11 @@
 	tbody tr:nth-child(odd) {
 		background: #eee;
 		}
+	tbody tr td a {
+		font-family:Arial, Helvetica, sans-serif;
+		text-decoration:none;
+		color:#000000;
+		}
 	.titulo{
 		padding: 0.5rem;
 		background:#004d83;
@@ -86,7 +91,7 @@
 		border: 3px solid #004d83;
 		}
 	#buscar{
-		width: 300px;
+		width: 90%px;
 		height: 36px;
 		font-size: 22px;
 		color: #fff;
@@ -103,9 +108,9 @@
 </head>
 
 <body>
-<div class="contenedor" id="contenedor" style=" height:1200px; margin-bottom:40px;">
+<div class="contenedor" id="contenedor" style=" height:1540px; margin-bottom:40px;">
 	<div class="logo" id="logo">
-    	<a href="index.html"><img src="./img/logo.jpg" style="margin:40px;"></a>
+    	<a href="index.html"><img src="./img/logo.jpg" style="margin:40px; margin-bottom:0px;"></a>
     </div>
 	<div class="menu" id="menu">
    	 <ul class="nav">
@@ -118,7 +123,7 @@
     <div>
  
     </div>
-    <div class="informativo" id="informativo" style="height:700px">
+    <div class="informativo" id="informativo" style="height:1200px">
     	<div class="titulo_2" id="titulo_2">
             <p><strong><h1>Buscador</h1></strong></p>
             <div class="titulos_2" id="titulos_2">
@@ -128,48 +133,67 @@
         	<center>
             		<h1>Buscadar informacion sobre contenedores</h1>
 
-<div class="derecha" id="buscar">Buscar <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filtrar" style="border:none;"  />
+<div class="box_buscador" id="box_buscador">
+<div class="derecha" id="buscar">Buscar 
+<input type="search" class="light-table-filter" data-table="order-table" placeholder="Material" style="border:none;"  />
+<input type="search" class="light-table-filter" data-table="order-table" placeholder="Descripción" style="border:none;"  />
+<input type="search" class="light-table-filter" data-table="order-table" placeholder="Dimensiones" style="border:none;"  />
+<input type="search" class="light-table-filter" data-table="order-table" placeholder="Kg" style="border:none;"  />
+</div>
+
 </div></center>
 
 	<div class="datagrid">
+    
     	<table class="order-table table">
+			 
         <thead>
         <tr class="titulo">
         	<td>
-            	NUMERO
+            	Foto
             </td>
             <td>
-            	CONTENEDOR
+            	Material
             </td>
             <td>
-            	NAVE
+            	Descripci&oacuten
             </td>
+            <td>
+            	Dimensiones
+            </td>
+             <td>
+            	Kg
+            </td>
+            
         </tr>
      	</thead>
         <tbody>
         	<tr>
-            	<td> 1122334455</td><td>Oficina</td><td>1</td>
+            	<td><a href="contenedor.html"><img src="img/principal1.jpg" alt="" style="width:50px; height:45px;"></a></td><td><a href="contenedor.html">30100182</a></td><td><a href="contenedor.html">BAT 301000182 MB 1212-08</a></td><td><a href="contenedor.html">1,200x1,200x750 mm</a></td><td><a href="contenedor.html">1.500 Kg</a></td>
             </tr>
             <tr>
-            	<td> 1111111111</td><td>Traspaletas</td><td>2</td>
+            	<td><a href="contenedor.html"><img src="img/principal1.jpg" alt="" style="width:50px; height:45px;"></a></td><td><a href="contenedor.html">30100189</a></td><td><a href="contenedor.html">Plastic pallet 1200x800</a></td><td><a href="contenedor.html">1,200x800x160 mm</a></td><td><a href="contenedor.html">1.000 Kg</a></td>
             </tr>
             <tr>
-            	<td> 5555555555</td><td>Contenedores</td><td>3</td>
+            	<td><a href="contenedor.html"><img src="img/principal1.jpg" alt="" style="width:50px; height:45px;"></a></td><td><a href="contenedor.html">30100693</a></td><td><a href="contenedor.html">Duragreen DGX654834-2L</a></td><td><a href="contenedor.html">1,638x1,219x853 mm</a></td><td><a href="contenedor.html">907 Kg</a></td>
             </tr>
             <tr>
-            	<td> 3333333333</td><td>MCA Montaje</td><td>4</td>
+            	<td><a href="contenedor.html"><img src="img/principal1.jpg" alt="" style="width:50px; height:45px;"></a></td><td><a href="contenedor.html">30100825</a></td><td><a href="contenedor.html">KTP Vario-Box System 2000 1600x1200 mm</a></td><td><a href="contenedor.html">1,600x1,200x980 mm</a></td><td><a href="contenedor.html">350 Kg</a></td>
             </tr>
             <tr>
-            	<td> 2222222222</td><td>C519</td><td>5</td>
+            	<td><a href="contenedor.html"><img src="img/principal1.jpg" alt="" style="width:50px; height:45px;"></a></td><td><a href="contenedor.html">30100856</a></td><td><a href="contenedor.html">Gitterbox / transport box</a></td><td><a href="contenedor.html">870x670x680 mm</a></td><td><a href="contenedor.html">600 Kg</a></td>
             </tr>
             <tr>
-            	<td> 1122222222</td><td>MCA Delantero</td><td>6</td>
+            	<td><a href="contenedor.html"><img src="img/principal1.jpg" alt="" style="width:50px; height:45px;"></a></td><td><a href="contenedor.html">30100907</a></td><td><a href="contenedor.html">BAT B01 Standard Steel Container (blue)</a></td><td><a href="contenedor.html">2,020x1,230x630 mm</a></td><td><a href="contenedor.html">400 Kg</a></td>
             </tr>
             <tr>
-            	<td> 2222334455</td><td>MCA Trasero</td><td>7</td>
+            	<td><a href="contenedor.html"><img src="img/principal1.jpg" alt="" style="width:50px; height:45px;"></a></td><td><a href="contenedor.html">30100911</a></td><td><a href="contenedor.html">BAT 111940 B-B2xx-001</a></td><td><a href="contenedor.html">1,200x1,000x760 mm</a></td><td><a href="contenedor.html">1.000 Kg</a></td>
             </tr>
             <tr>
-            	<td> 4444444441</td><td>MQBA0</td><td>8</td>
+            	<td><a href="contenedor.html"><img src="img/principal1.jpg" alt="" style="width:50px; height:45px;"></a></td><td><a href="contenedor.html">30100912</a></td><td><a href="contenedor.html">BAT 111960 B-B2xx-001</a></td><td><a href="contenedor.html">1,200x1,000x999 mm</a></td><td><a href="contenedor.html">1.000 Kg</a></td>
+            </tr>
+            <tr>
+            	<td><a href="contenedor.html"><img src="img/principal1.jpg" alt="" style="width:50px; height:45px;"></a></td><td><a href="contenedor.html">30100937</a></td><td><a href="contenedor.html">BAT washing container big 1500x1200x2700</a></td><td><a href="contenedor.html">1,500x1,200x2,700 mm</a></td><td><a href="contenedor.html">- Kg</a></td>
             </tr>
         </tbody>
         </table>

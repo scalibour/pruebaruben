@@ -158,6 +158,13 @@ ul, ol {
 	animation: cambio 20s infinite;
 	animation-direction:alternate;
 }
+.img_descripcion ul {
+	padding:0px;
+	display:flex;
+	width:100%;
+	
+	
+}
 
 .img_portada ul li {
 	list-style:none;
@@ -168,6 +175,11 @@ ul, ol {
 	width:600px;
 	height:300px;
 }
+.img_descripcion img {
+	width:600px;
+	height:300px;
+}
+
 
 @keyframes cambio {
 	0% {margin-left: 0%;}
